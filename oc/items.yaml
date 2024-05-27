@@ -26,7 +26,8 @@ items:
   description: ''
   displayName: controller
   properties:
-  - configurationAsCode: {}
+  - configurationAsCode: 
+      bundle: main/bundle-1 
   - customWebhookData: {}
   - sharedHeaderLabelOptIn:
       optIn: true
