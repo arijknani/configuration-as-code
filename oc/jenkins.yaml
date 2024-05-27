@@ -1,0 +1,401 @@
+credentials:
+  system:
+    domainCredentials:
+    - credentials:
+      - string:
+          id: "jenkins-openshift-1"
+          scope: GLOBAL
+          secret: "{AQAAABAAAATwtfvVkdJ3ZzK3Lyl1TOgPSAprU7H4lmX/6SfHgwD5Hmyl4/u6EqNv3luZUk60P4qaA5ttzozuF2BQ/Uo/Q/D15aE17CJwt3a2k6rmPz7HrpcHHWfP5qQsSECfIPLr9gJ7r9RgbCObifKOzu/0FJc6H21Deiwek8RbWIqN6RVEkAG7e38/qdj27mcF31MWClpSLdKscjhGOE8ZX/SFaSuRgDX1TWD6woMKIWyAxN8ByqMzR/t4XuJpFjdgs+wbc3E9YFUwbzvOSrop/qiEWKn58Y9T8HrxnN3zDJuTCcJFQhV8Sv0dU5nQbzWexhZJIP66skGpwQm0LD/nvmbbLM2wKP/ln3dH74n+dq4+AYRAS31s5iKBH6paPHmGlQtm+zIH6Jl6oO2MwBVuWbE5j1x8ODxZys1DY7+axO8i7QSJvKXf1cZhldtf+LWH/YiMlsAh7V/OoyDtrhsHHiXTVd2uKzTkU+pzPWuq/M23ah21wATC1+HK6cT+7WNoKVqkD1RRVESwTi+IupUxZY85eBA/bO7PjyaOHd0u+ItnRYuDrXxKzbNyaEYom04cONI2O2+KuA1el7hT7mC8hamQ2Sgd2AwnZ50tTrboIXcZPIt4dAQjomgBhz+HFx+LfG+MRpbLDDYUWcA0wbmmdtPtrLfMwcU5TP3yx+Sn97aGs+B6a3lSiv791m1w07bUhyFbYlCVtaBWfOV0MGvyUFw6d7vhgbSaAXjAnCbW+tPoWL8OhZrW5553YMJkcJQGSgAkDd/4vFi14oKKwDK/VfDBab69w8+ISkpMLdPFxbj4KLfzJXH8kn8atEOvwnxqxKyJPnH991xals1okaE+ehcCDL7bGP0b5uXC5LLt6gnVMcVtEHCepjyiZhOQcpiEyZC8O47gOLSECm/ldT0GuJM/fFv3+oWkIU77U6ZXfkr5zCGrRcQa9/7az4cnLbW9qjm/FQSrXnYMORJi7BEqccIc6bW8K2oTJio5dMyjCQMLOpARGwCn8C9bduOzJnQp3SrskLlcgDqOMC1UpkX8zylQFJivIgYrQnbAM5l1fIIgW1I56nTesrCFje68qtuTct5Gq9K+rG4fdIowZJYVlqFnTgjP7SS6vB22xdXdLgnsdwEtgEV3Qspyky3PYIcZ7Qj/7meVrHwGCVXCrNvrri7QxxZOsA7kJiNNiC/bxSSK64YvfTzIzuYmRKbthG7vyaXmIwl/GaHLF9cAIh/T9Vxd2+7L37m6Xi03H0pVpNd7NwYqAAVTfNiBnDIDLMuNlZ4gVg0yHZ0Zp3dh6BX+n0mPTWeN+VBmfzy+WV+BA1+UbkyPtvS7aDVtmManXRSHBtVGBwjnIyf1JH/w9+ah7vzjI35gMMIgrLzvLGHBTZekoeuliCSue2+mBZHfgmuSjMx+q20Vtty1cNXmgCeUZnLeoB0csGeZa5gb6xTVp2BEnjozRQuSaQWyhqUoqAQ+rOq9+LV/xt71Xtf2lnGD01sMLUWBqJ1VSWJLsZi/bJzLGC8hppv2LPEzEsTFbPu0KCBrnfHKX5Yfhao+iDomEJbmX5YW809ud5AgibRLgQGBbTYLFIkQN2KRf1YWGNUUl2dsf00O/xLOevP5kttW2wDWavlvVI93VwZjjVbjkakInye6HEsg+A70kVbua3G8OV914D91hjzT4JVFkJbuF059GGLS6vPhHdR8iWtMqpO9mZk3KzM=}"
+      - usernamePassword:
+          description: "github"
+          id: "github"
+          password: "{AQAAABAAAAAw57lGNpppDEkOmvOTSQVb9vBnCx3mUfhtDAKJghlH8HRy3nE7JzCVk+C4SjcemOhVPN+3vn/8GhVsd6jqA7nErQ==}"
+          scope: GLOBAL
+          username: "arijknani"
+jenkins:
+  agentProtocols:
+  - "Diagnostic-Ping"
+  - "JNLP4-connect"
+  - "OperationsCenter2"
+  - "Ping"
+  authorizationStrategy:
+    loggedInUsersCanDoAnything:
+      allowAnonymousRead: false
+  clouds:
+  - kubernetes:
+      containerCap: 10
+      containerCapStr: "10"
+      credentialsId: "jenkins-openshift-1"
+      name: "kubernetes"
+      namespace: "arij-project"
+      serverUrl: "https://api.ocp.smartek.ae:6443"
+      skipTlsVerify: true
+      webSocket: true
+  crumbIssuer:
+    standard:
+      excludeClientIPFromCrumb: false
+  disableRememberMe: false
+  disabledAdministrativeMonitors:
+  - "hudson.util.DoubleLaunchChecker"
+  - "com.cloudbees.jenkins.plugins.administrative_monitors.BlueOceanMonitor"
+  - "jenkins.diagnostics.ControllerExecutorsAgents"
+  labelAtoms:
+  - name: "built-in"
+  markupFormatter: "plainText"
+  mode: NORMAL
+  myViewsTabBar: "standard"
+  noUsageStatistics: true
+  nodeMonitors:
+  - "architecture"
+  - "clock"
+  - diskSpace:
+      freeSpaceThreshold: "1GiB"
+      freeSpaceWarningThreshold: "2GiB"
+  - "swapSpace"
+  - tmpSpace:
+      freeSpaceThreshold: "1GiB"
+      freeSpaceWarningThreshold: "2GiB"
+  - "responseTime"
+  numExecutors: 2
+  primaryView:
+    masters:
+      columns:
+      - "status"
+      - "weather"
+      - "jobName"
+      - "manageMaster"
+      - "masterPodStatusViewColumn"
+      - "masterConfigurationStaleViewColumn"
+      - "totalJobsViewColumn"
+      - "queueSizeViewColumn"
+      - "jenkinsVersionViewColumn"
+      - "listSelectionColumn"
+      jobFilters:
+      - "connectedMasterViewFilter"
+      name: "Controllers"
+      recurse: true
+  projectNamingStrategy: "standard"
+  quietPeriod: 5
+  remotingSecurity:
+    enabled: true
+  scmCheckoutRetryCount: 0
+  securityRealm:
+    local:
+      allowsSignup: false
+      enableCaptcha: false
+      users:
+      - id: "arijknani"
+        name: "arijknani"
+        properties:
+        - "consoleUrlProvider"
+        - "blueSteelRedirectOptOutProperty"
+        - "myView"
+        - preferredProvider:
+            providerId: "default"
+        - "timezone"
+        - "experimentalFlags"
+        - mailer:
+            emailAddress: "arijknani1@gmail.com"
+        - "apiToken"
+  slaveAgentPort: 50000
+  updateCenter:
+    sites:
+    - id: "core-oc-offline"
+      url: "file:/tmp/jenkins/war/WEB-INF/plugins/update-center.json"
+    - id: "cap-core-oc"
+      url: "https://jenkins-updates.cloudbees.com/update-center/envelope-core-oc/update-center.json"
+  views:
+  - masters:
+      columns:
+      - "status"
+      - "weather"
+      - "jobName"
+      - "manageMaster"
+      - "masterPodStatusViewColumn"
+      - "masterConfigurationStaleViewColumn"
+      - "totalJobsViewColumn"
+      - "queueSizeViewColumn"
+      - "jenkinsVersionViewColumn"
+      - "listSelectionColumn"
+      jobFilters:
+      - "connectedMasterViewFilter"
+      name: "Controllers"
+      recurse: true
+  - all:
+      name: "all"
+  viewsTabBar: "standard"
+beekeeper:
+  enabled: true
+  securityWarnings:
+    enabledForCore: true
+    enabledForPlugins: true
+  upgrades:
+    autoDowngradePlugins: false
+    autoUpgradePlugins: true
+cloudBeesCasCServer:
+  disableRemoteValidation: false
+  visibility: false
+controllerLifecycleNotifications:
+  authenticator: "none"
+  enabled: false
+  ignoreTlsConnectionErrors: false
+license:
+  certificate: |
+    -----BEGIN CERTIFICATE-----
+    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
+    jSyXt9OizSXKrIPfGdwS+bEFhAjS8r3hM/WT
+    -----END CERTIFICATE-----
+  key: |
+    -----BEGIN RSA PRIVATE KEY-----
+    MIIEowIBAAKCAQEAvwxeWtEn6k3A8UN9RmvERbX2umllp2Zm2FhhMRBvbEWHMsSm
+    WKGxv+PmYXzM5TRupjIaRqklYBCCsReQfJF/ZBV4C1ncBPkVYoSjFbqXKx8CAJTw
+    3ZO19Wc9TETuSAb0ZS8rksMJ/quzPGC/38g8XEz3+0IWzuhxbpcuKQHkPMhmsavh
+    i2Kbi8jBd2mZ8bu1eFT9JyN6Q+n4DjX+jKMabJryShS3XR/3HYZRP+DLLBfuYkXI
+    w9mYMI0myYnDG5U9Y5AztO+SHB6dMlwaeMhX4riwYXjZwzQbMocTPW0KQYmm18jC
+    V+Nnnha08Q5DNovdae+HXUD7hXP9jSHcn5C6RwIDAQABAoIBADkbc2DmQG4zS8dS
+    izHvqL3FxLi4JKDDZV6qHHNUHFpa9izgx3Ca9M0NTKI7cevZnnGjbGNO0FNE3Cwf
+    hRsXSuMZ38ZU2AXMhu3qA+3M1r8XB7wwyUcSjkOK1rHjsO5q1cchMH8wOd6caHlV
+    2kUET7avczjx6mty4+VQ34V2gUkBgiHlxIZnJuiCdrSq8UqJXlir0ehuttmhKX/f
+    xK3O8dINJaPpFlAq84N6OH/AlSbPn3KlKduSK7ir+O+2b9zvEHQuMkBSACNfoHo9
+    vjajEBic7hohB7yi44Buc4/JEuEr3+tW3/pGBMQKguOGUXb9+TfC6kXYTov+UAkI
+    Y93pr2ECgYEA4iOuQ1wqJUPIkHXeK3shpGbTJOc8lP3oYY+Jnhs2vpp7G6ej3zBo
+    L7ui1NNM6d6regL9zdUqqGpKeun56xxWhbzaHDS0YY7weCYQiorpTKmklAyC7t/m
+    DiQCXffd0Q9SQtKbjpTNTFOK0IxPvmGrjqqhkHtwutRJDuQwabbMQv8CgYEA2EZ8
+    B/rZQiUQvuHmGNlpoCKZC7UqQcN1MqSAW1okJn2kEDlW3M95myD/N2ZejSCDIxYe
+    fwNUis0ImlBspPZLYAceIfl/efme5XzOjIAcRTj16hx3ZV1THppLDXoVhspDtmkV
+    UrEa4Dk6VhwfjFC9s3ph++Plkwq/+/i66vkbsLkCgYAm5CoJLaWV6RVqOsstwSxl
+    AMYZV6dknFJFzRDG3zlICHtZozgcn0+bvfJgFcLpicEF59PMfXerpTQP9YNkuufq
+    cjM0nJ/VE2cp0qoPmZpL8/T4/TnbaShAkFLT5FgCp1bnZR8Zo1+3W7rI6Qih3lxJ
+    2fCVT5VwnCfAZuAoniZ88wKBgQCL/qQOrkuvyzpZtPQypZj/tSWINI7T3uegDmef
+    umuoFq/6aINXj11SEzvg6nzNsXvxXEIFSWySJEIrUV/iMCN+V10j9NKVbAV02yMA
+    Q3UJQeO81QxcKtrA9nMamCoTBB5slvzceBPDjIe8cZviQelpohCG8nAKjGzVd53W
+    t8U60QKBgFy2AGpvFyGCNnDOpJsyq8JdRq+EXoKM0cr6ij9q8WwfDgOC8JXfBf2c
+    Dl9r/xXdMvuY1yM1uJVM65+Q33FsoIrZ1aQg+sjFNl148ZHX9tqgMwr9QlSEdk7V
+    1MNw+Mf/3Zg1ErPcnzwKPX2ihjM+rcZPs0HKSTh2DKb6JYcHjbw+
+    -----END RSA PRIVATE KEY-----
+masterprovisioning:
+  dockerImageDefinitionConfiguration:
+    images:
+    - imageTag: "cloudbees/cloudbees-core-mm:2.452.1.2"
+      name: "CloudBees CI - Managed Controller - 2.452.1.2"
+  kubernetes:
+    clusterEndpoints:
+    - id: "default"
+      jenkinsUrl: "http://cjoc.arij-project.svc.cluster.local/cjoc/"
+      name: "kubernetes"
+      serviceExposure: "openShiftRoute"
+    cpus: "1.0"
+    disk: 50
+    globalJavaOptions: "-Dorg.csanchez.jenkins.plugins.kubernetes.pipeline.PodTemplateStepExecution.defaultImage=cloudbees/cloudbees-core-agent:2.452.1.2\
+      \ -Dcom.cloudbees.jenkins.plugins.kube.ServiceAccountFilter.defaultServiceAccount=jenkins-agents\
+      \ -Dcom.cloudbees.networking.useSubdomain=false -Dcom.cloudbees.networking.protocol=\"\
+      https\" -Dcom.cloudbees.networking.hostname=\"oc.apps.ocp.smartek.ae\" -Dcom.cloudbees.networking.port=443\
+      \ -Dcom.cloudbees.networking.operationsCenterName=\"cjoc\""
+    javaOptions: "-XshowSettings:vm -XX:+AlwaysPreTouch -XX:+DisableExplicitGC -XX:+ParallelRefProcEnabled\
+      \ -XX:+UseStringDeduplication -Dhudson.slaves.NodeProvisioner.initialDelay=0"
+    livenessInitialDelaySeconds: 300
+    livenessPeriodSeconds: 10
+    livenessTimeoutSeconds: 10
+    memory: 3072
+    readinessFailureThreshold: 100
+    readinessInitialDelaySeconds: 30
+    readinessTimeoutSeconds: 5
+    terminationGracePeriodSeconds: 1200
+support:
+  automatedBundleConfiguration:
+    componentIds:
+    - "CloudBeesAssuranceSupport"
+    - "CascScmRetrieverSupport"
+    - "CloudBeesCasCUpdateLogBundlesSupport"
+    - "AgentsConfigFile"
+    - "ConfigFileComponent"
+    - "OtherConfigFilesComponent"
+    - "AboutBrowser"
+    - "AboutJenkins"
+    - "AboutUser"
+    - "AdministrativeMonitors"
+    - "AgentProtocols"
+    - "BuildQueue"
+    - "CustomLogs"
+    - "DumpExportTable"
+    - "EnvironmentVariables"
+    - "FileDescriptorLimit"
+    - "GCLogs"
+    - "HeapUsageHistogram"
+    - "ItemsContent"
+    - "AgentsJVMProcessSystemMetricsContents"
+    - "MasterJVMProcessSystemMetricsContents"
+    - "JenkinsLogs"
+    - "LoadStats"
+    - "LoggerManager"
+    - "Metrics"
+    - "NetworkInterfaces"
+    - "NodeExecutors"
+    - "NodeMonitors"
+    - "OtherLogs"
+    - "ReverseProxy"
+    - "RootCAs"
+    - "RunningBuilds"
+    - "SlaveCommandStatistics"
+    - "SlaveLaunchLogs"
+    - "SlaveLogs"
+    - "AgentsSystemConfiguration"
+    - "MasterSystemConfiguration"
+    - "SystemProperties"
+    - "TaskLogs"
+    - "ThreadDumps"
+    - "UpdateCenter"
+    - "UserCount"
+    - "ComponentImpl"
+    - "SlowRequestComponent"
+    - "HighLoadComponent"
+    - "DeadlockRequestComponent"
+    - "KubernetesMasterLogs"
+    - "KubernetesMasterManifests"
+    - "ConnectedMasterSupportComponent"
+    - "UserActivityComponent"
+    - "PipelineInternalCalls"
+    - "PipelineTimings"
+    - "PipelineThreadDump"
+    enabled: true
+    period: 1
+globalCredentialsConfiguration:
+  configuration:
+    providerFilter: "none"
+    typeFilter: "none"
+appearance:
+  prism:
+    theme: PRISM
+security:
+  anonymizeSupportBundle:
+    enabled: false
+  apiToken:
+    creationOfLegacyTokenEnabled: false
+    tokenGenerationOnCreationEnabled: false
+    usageStatisticsEnabled: true
+  gitHooks:
+    allowedOnAgents: false
+    allowedOnController: false
+  gitHostKeyVerificationConfiguration:
+    sshHostKeyVerificationStrategy: "knownHostsFileVerificationStrategy"
+  sSHD:
+    port: -1
+  securitySettingsEnforcement:
+    global:
+      realmAndAuthorization:
+        canCustomMapping: false
+        canOverride: false
+        defaultMappingFactory: "restrictedEquivalentRAMF"
+unclassified:
+  buildDiscarders:
+    configuredBuildDiscarders:
+    - "jobBuildDiscarder"
+  bundleStorageService:
+    activated: true
+    bundles:
+    - name: "bundle-location"
+      retriever:
+        SCM:
+          scmSource:
+            git:
+              credentialsId: "github"
+              id: "b8aeba79-e32c-47cd-b8e6-4a583d2648c4"
+              remote: "https://github.com/arijknani/configuration-as-code.git"
+              traits:
+              - "gitBranchDiscovery"
+    checkOutTimeout: 600
+    pollingPeriod: 120
+    purgeOnDeactivation: true
+  bundleUpdateTiming:
+    automaticReload: false
+    automaticRestart: false
+    rejectWarnings: false
+    reloadAlwaysOnRestart: false
+    skipNewVersions: false
+  cascAutoControllerProvisioning:
+    duration: 60
+    fireAndForget: true
+    initialDelay: 15
+    provisionControllerOnCreation: false
+    timeout: 600
+  cascItemsConfiguration:
+    variableInterpolationEnabledForAdmin: false
+    variableInterpolationEnabledForNonAdmin: false
+  experimentalPlugins:
+    enabled: false
+  fingerprints:
+    fingerprintCleanupDisabled: false
+    storage: "file"
+  gitHubConfiguration:
+    apiRateLimitChecker: ThrottleForNormalize
+  gitHubPluginConfig:
+    hookUrl: "https://oc.apps.ocp.smartek.ae/cjoc/github-webhook/"
+  junitTestResultStorage:
+    storage: "file"
+  location:
+    adminAddress: "address not configured yet <nobody@nowhere>"
+    url: "https://oc.apps.ocp.smartek.ae/cjoc/"
+  mailer:
+    charset: "UTF-8"
+    useSsl: false
+    useTls: false
+  operationsCenterSharedConfiguration:
+    enabled: false
+  pollSCM:
+    pollingThreadCount: 10
+  scmGit:
+    addGitTagAction: false
+    allowSecondFetch: false
+    createAccountBasedOnEmail: false
+    disableGitToolChooser: false
+    hideCredentials: false
+    showEntireCommitSummaryInChanges: false
+    useExistingAccountWithSameEmail: false
+  usageStatisticsCloudBees:
+    disabledJenkinsUsageStatistics: true
+    usageStatisticsCollected: true
+  validationVisualization:
+    quiet: false
+tool:
+  cloudbeesPluginUsageAnalyzer:
+    enabled: true
+  git:
+    installations:
+    - home: "git"
+      name: "Default"
+  mavenGlobalConfig:
+    globalSettingsProvider: "standard"
+    settingsProvider: "standard"
