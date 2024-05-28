@@ -296,12 +296,12 @@ unclassified:
   gitHubConfiguration:
     apiRateLimitChecker: ThrottleForNormalize
   gitHubPluginConfig:
-    hookUrl: "https://oc.apps.ocp.smartek.ae/cjoc/github-webhook/"
+    hookUrl: "https://casc.apps.ocp.smartek.ae/cjoc/github-webhook/"
   junitTestResultStorage:
     storage: "file"
   location:
     adminAddress: "address not configured yet <nobody@nowhere>"
-    url: "https://oc.apps.ocp.smartek.ae/cjoc/"
+    url: "https://casc.apps.ocp.smartek.ae/cjoc/"
   mailer:
     charset: "UTF-8"
     useSsl: false
