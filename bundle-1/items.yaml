@@ -12,7 +12,6 @@ items:
         scmGit:
           userRemoteConfigs:
           - userRemoteConfig:
-              credentialsId: github_creds
               url: https://github.com/arijknani/pfe-application.git
           branches:
           - branchSpec:
@@ -41,37 +40,45 @@ items:
   catalog: pfe-catalog
   name: my-app-template
   model: pfe-catalog/deploy-on-openshift
-  attributes:
-  - type: string
-    value: arijknani
-    key: quay_repo
-  - type: string
-    value: https://github.com/arijknani/pfe-application.git
-    key: repo_url
-  - type: string
-    value: my-app-template
-    key: image_name
-  - type: string
-    value: my-app-template
-    key: app_name
-  - type: credentials
-    value: github_creds
-    key: github_creds
-  - type: string
-    value: main
-    key: branch_name
-  - type: string
-    value: my-app-template
-    key: name
-  - type: credentials
-    value: quay_creds
-    key: quay_creds
-  - type: string
-    value: https://api.ocp.smartek.ae:6443
-    key: openshift_url
-  - type: string
-    value: arij-casc
-    key: openshift_project
-  - type: credentials
-    value: sa_token
-    key: sa_token
+  attributes: {}
+  concurrentBuild: true
+  definition:
+    cpsFlowDefinition:
+      sandbox: true
+      script: |
+        pipeline {
+          agent {
+            kubernetes {
+              yaml '''
+                apiVersion: v1
+                kind: Pod
+                spec:
+                  containers:
+                  - name: maven
+                    image: maven:alpine
+                    command:
+                    - cat
+                    tty: true
+                '''
+            }
+          }
+          stages {
+            stage('Run maven') {
+              steps {
+                container('maven') {
+                  sh 'mvn -version'
+                }
+              }
+            }
+          }
+        }
+  description: ''
+  disabled: false
+  displayName: test-maven
+  properties:
+  - buildConfigProjectProperty:
+      uid: ''
+      resourceVersion: ''
+      name: ''
+      namespace: ''
+  resumeBlocked: false
