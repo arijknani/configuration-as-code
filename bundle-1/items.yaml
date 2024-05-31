@@ -40,7 +40,42 @@ items:
   catalog: pfe-catalog
   name: my-app-template
   model: pfe-catalog/deploy-on-openshift
-  attributes: {}
+  attributes:
+  - type: string
+    value: arijknani
+    key: quay_repo
+  - type: string
+    value: https://github.com/arijknani/pfe-application.git
+    key: repo_url
+  - type: string
+    value: pfe-app
+    key: image_name
+  - type: string
+    value: app-pfe-template
+    key: app_name
+  - type: credentials
+    value: github_creds
+    key: github_creds
+  - type: string
+    value: main
+    key: branch_name
+  - type: string
+    value: my-app-template
+    key: name
+  - type: credentials
+    value: quay_creds
+    key: quay_creds
+  - type: string
+    value: https://api.ocp.smartek.ae:6443
+    key: openshift_url
+  - type: string
+    value: arij-project
+    key: openshift_project
+  - type: credentials
+    value: sa_token
+    key: sa_token
+- kind: pipeline
+  name: test-maven
   concurrentBuild: true
   definition:
     cpsFlowDefinition:
