@@ -1,7 +1,24 @@
 credentials:
   system:
     domainCredentials:
-    - credentials: []
+    - credentials:
+      - usernamePassword:
+          description: "github"
+          id: "github_creds"
+          password: "{AQAAABAAAAAwec6szxmWR+6p8BkXCCvaKiLs5+zynPnIt835/ded7B5Zv1BmdeOTFuSQBTMtOmeVvdY13+qvAzcGp1Di/7J27g==}"
+          scope: GLOBAL
+          username: "arijknani"
+      - usernamePassword:
+          description: "quay"
+          id: "quay_creds"
+          password: "{AQAAABAAAAAQYFScdDuoac2bj9FbGxYTX+G4H4K9ZmwK8xxghxF8rQY=}"
+          scope: GLOBAL
+          username: "arijknani"
+      - string:
+          description: "service account"
+          id: "sa_token"
+          scope: GLOBAL
+          secret: "{AQAAABAAAAUAxiqNe7mhjziA71r1ILDp50bOprmYgcetUGhi3aYS80hxy/UiJOi1vbH6eXoAc39T5Y7EEMChJ2FxLEkIcvIuTK98e6IXeVA1HifwNxWBpr93QuSO5s0ptKiPq70z9rjrnsQYTs4peU+sWIciHHNz4XwCmp3AhaeBLDSOe8+zUwunajCzBmvhQQ5Q3+0Sq9frsX0taGviiTvZbcr4XwAvc28H9p90r3PFhKE8KoM2avbwZ1z6/pzwcqZZkcwiUMS22IUKDNMEeVL3+2QLZdfl04QKKaPf5SDdbTpee5iQz8tnRY0afQPsXIspBuOKeZAc1rEbtztPlkKt4ZxIzURqVMmr12BRitwrBi+scqW10p8aMJyGqMkG5j++Al0E6wBpOe9nzU7mOeXhiLlvAtflusCPMGMeF/AIbAx+xC6DG0iF/De+3MSsg265UkLJMrNdrjzdJLexLBByhx9KOSjf6ad5wT7Jys94Qkee2KNiJdBDa48FMPGE+BGSk7glX9DrqzIU4XIzkxH6VumN0GxccKE3mvHkhfWnA/4nA73DW6lsuZwxQmy6zKnSmP7hmPuzcLo0EAeOghonMz5/w5yn7vX4lc3jF9UXmnLxk2Ehkv67wVsmuYZiyiMk92gQYDliKO8EuR3RGrBhFZGGWAwmvXpcrgapg9LtFS/8QdCfrGy4DYjM5FnlKj4Y4+RGpbIKsmmnyTp3dhbDOuJDKMaOakN1GSAvJBs5BMqo03pLkD3t1IT4Bijyrt8RljkrEjyw596MAM/kZ1YzyxDVCGUNqPaGix3X+pAhHRwC4RIcmuwRdV2lXp0wBw5s/+jr8T+yjMTDl6wSt35eN8DFludCNSMdsCUN6ROfMtGV+iqUnCdhkCRz9+Ph1pfc19gNMWJOiaYeGo3M0480Eqtmw51cO6V4eSYxoM16tr5gmbDUgL5SwFijdz2bocIOUZViI+lOYGRkzRIVlAdvEDIrdec5B3mlFlap6WRxj1ffsUe0W2b/WwmVgFqyz7Hpxceqtg7FkBLS14LaadJGxWnMkw9VnP9b3dLor+fbKtNWqik/7jU3TKhNApyUlQ/wbVk51UtaNnF32O8OAcZz2d2nkHE8onToyU4tApuBrX+VYl1ntdqOwduAcggCNp1o7vrEjWUPewnPOq/5EUsKuB12t6Z/Lx1ZoFwBVPEdc8AWCeHsckkpNkQklxcgvz32A/dWRWRBUzmmuSK2dubgXOmhK7VKdbug5w7XqgXp0UL977L9MptMcaAnIEZCm5YOTfJxkusElevWRhEYMu4DFbPph7z9H64ZciIa6zIIQSy8kaNHdK9mvnKXVFQDUcKutYKSTa4HSz+kHfDtCb6MGzFbK1g3ojPOTdX0LlbHG4MDhToodFXW89WWhmdaLCLCSKzBjdLwoJ8LO1WfiJcqp9hmWi9aHTyrH5pO7w/mWJ9lAjKMLFrQlhkwFSz6RpgjtR5mPx/miAMZT5Xc3ywh50dqJO4w9aiafu16vvFPuAWWaqv2eyJcSHUbtLr+vT0vSVPheSXOaOjh1qPGe5kORYkQjMyZnVJs0WM/lNCnVIFU/QrHaduBcb6gMoJPk16y97ExUV1/sCFQURz/VSEgCJkVbj0PfLUXr22Wjs0YBxUN99RrgZdtCqR9EoYaBuQI02ldOOz9OexkBo9R0lZELSnoyeZApPpN4DIT97Xe1Dy2Lk2G6Z4ieVkeUZHjPjv2MX5VpiUT}"
 jenkins:
   agentProtocols:
   - "Diagnostic-Ping"
