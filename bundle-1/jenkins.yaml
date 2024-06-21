@@ -268,7 +268,7 @@ unclassified:
   gitHubConfiguration:
     apiRateLimitChecker: ThrottleForNormalize
   gitHubPluginConfig:
-    hookUrl: "https://casc.apps.ocp.smartek.ae/controller/github-webhook/"
+    hookUrl: "https://oc.apps.ocp.smartek.ae/controller/github-webhook/"
   globalLibraries:
     libraries:
     - defaultVersion: "master"
@@ -287,7 +287,7 @@ unclassified:
     foldersEnabled: true
     imageStreamListInterval: 300
     maxConnections: 100
-    namespace: "arij-casc"
+    namespace: "arij-project"
     secretListInterval: 300
     syncBuildConfigsAndBuilds: true
     syncConfigMaps: true
@@ -307,7 +307,7 @@ unclassified:
     storage: "file"
   location:
     adminAddress: "address not configured yet <nobody@nowhere>"
-    url: "https://casc.apps.ocp.smartek.ae/controller/"
+    url: "https://oc.apps.ocp.smartek.ae/controller/"
   mailer:
     charset: "UTF-8"
     useSsl: false
