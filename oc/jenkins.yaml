@@ -137,8 +137,8 @@ controllerLifecycleNotifications:
 masterprovisioning:
   dockerImageDefinitionConfiguration:
     images:
-    - imageTag: "cloudbees/cloudbees-core-mm:2.452.1.2"
-      name: "CloudBees CI - Managed Controller - 2.452.1.2"
+    - imageTag: "cloudbees/cloudbees-core-mm:2.452.2.3"
+      name: "CloudBees CI - Managed Controller - 2.452.2.3"
   kubernetes:
     clusterEndpoints:
     - id: "default"
@@ -147,7 +147,7 @@ masterprovisioning:
       serviceExposure: "openShiftRoute"
     cpus: "1.0"
     disk: 50
-    globalJavaOptions: "-Dorg.csanchez.jenkins.plugins.kubernetes.pipeline.PodTemplateStepExecution.defaultImage=cloudbees/cloudbees-core-agent:2.452.1.2\
+    globalJavaOptions: "-Dorg.csanchez.jenkins.plugins.kubernetes.pipeline.PodTemplateStepExecution.defaultImage=cloudbees/cloudbees-core-agent:2.452.2.3\
       \ -Dcom.cloudbees.jenkins.plugins.kube.ServiceAccountFilter.defaultServiceAccount=jenkins-agents\
       \ -Dcom.cloudbees.networking.useSubdomain=false -Dcom.cloudbees.networking.protocol=\"\
       https\" -Dcom.cloudbees.networking.hostname=\"oc.apps.ocp.smartek.ae\" -Dcom.cloudbees.networking.port=443\
