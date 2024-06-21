@@ -21,7 +21,7 @@ jenkins:
       containerCapStr: "10"
       credentialsId: "jenkins-openshift"
       name: "kubernetes"
-      namespace: "arij-casc"
+      namespace: "arij-project"
       serverUrl: "https://api.ocp.smartek.ae:6443"
       skipTlsVerify: true
       webSocket: true
@@ -142,7 +142,7 @@ masterprovisioning:
   kubernetes:
     clusterEndpoints:
     - id: "default"
-      jenkinsUrl: "http://cjoc.arij-casc.svc.cluster.local/cjoc/"
+      jenkinsUrl: "http://cjoc.arij-project.svc.cluster.local/cjoc/"
       name: "kubernetes"
       serviceExposure: "openShiftRoute"
     cpus: "1.0"
@@ -150,7 +150,7 @@ masterprovisioning:
     globalJavaOptions: "-Dorg.csanchez.jenkins.plugins.kubernetes.pipeline.PodTemplateStepExecution.defaultImage=cloudbees/cloudbees-core-agent:2.452.1.2\
       \ -Dcom.cloudbees.jenkins.plugins.kube.ServiceAccountFilter.defaultServiceAccount=jenkins-agents\
       \ -Dcom.cloudbees.networking.useSubdomain=false -Dcom.cloudbees.networking.protocol=\"\
-      https\" -Dcom.cloudbees.networking.hostname=\"casc.apps.ocp.smartek.ae\" -Dcom.cloudbees.networking.port=443\
+      https\" -Dcom.cloudbees.networking.hostname=\"oc.apps.ocp.smartek.ae\" -Dcom.cloudbees.networking.port=443\
       \ -Dcom.cloudbees.networking.operationsCenterName=\"cjoc\""
     javaOptions: "-XshowSettings:vm -XX:+AlwaysPreTouch -XX:+DisableExplicitGC -XX:+ParallelRefProcEnabled\
       \ -XX:+UseStringDeduplication -Dhudson.slaves.NodeProvisioner.initialDelay=0"
@@ -290,12 +290,12 @@ unclassified:
   gitHubConfiguration:
     apiRateLimitChecker: ThrottleForNormalize
   gitHubPluginConfig:
-    hookUrl: "https://casc.apps.ocp.smartek.ae/cjoc/github-webhook/"
+    hookUrl: "https://oc.apps.ocp.smartek.ae/cjoc/github-webhook/"
   junitTestResultStorage:
     storage: "file"
   location:
     adminAddress: "address not configured yet <nobody@nowhere>"
-    url: "https://casc.apps.ocp.smartek.ae/cjoc/"
+    url: "https://oc.apps.ocp.smartek.ae/cjoc/"
   mailer:
     charset: "UTF-8"
     useSsl: false
