@@ -1,4 +1,10 @@
 OperationsCenter:
+  JavaOpts: >-
+    -Dorg.csanchez.jenkins.plugins.kubernetes.pipeline.PodTemplateStepExecution.defaultImage=cloudbees/cloudbees-core-agent:2.452.1.2\
+    \ -Dcom.cloudbees.jenkins.plugins.kube.ServiceAccountFilter.defaultServiceAccount=jenkins-agents\
+    \ -Dcom.cloudbees.networking.useSubdomain=false -Dcom.cloudbees.networking.protocol=\"\
+    https\" -Dcom.cloudbees.networking.hostname=\"oc.apps.ocp.smartek.ae\" -Dcom.cloudbees.networking.port=443\
+    \ -Dcom.cloudbees.networking.operationsCenterName=\"cjoc\"
   CasC:
     Enabled: true 
     ConfigMapName: oc-casc
